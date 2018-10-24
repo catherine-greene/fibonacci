@@ -70,6 +70,9 @@ class FibonacciProducer {
         if (lowerBound < 0) {
             lowerBound = -lowerBound;
         }
+        if (upperBound < 0) {
+            upperBound = -upperBound;
+        }
         String result;
         if (lowerBound == 0) {
             first = ONE_DIGIT_FIBONACCI[0];
@@ -142,7 +145,7 @@ class FibonacciProducer {
 
     private String calcSequence(int first, int second, int upperBound) {
         StringBuilder stringBuilder;
-        if (first == 0) {
+        if (first == 0 || first == 1 && second != 2) {
             stringBuilder = new StringBuilder(first + ", " + second + ", ");
         } else {
             stringBuilder = new StringBuilder(second + ", ");

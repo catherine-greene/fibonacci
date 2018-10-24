@@ -24,6 +24,8 @@ public class App {
                 input = Integer.parseInt(inputStr);
                 if (input == 2 || input == 1) {
                     break;
+                } else {
+                    System.out.println("Incorrect input!");
                 }
             } catch (NumberFormatException ex) {
                 System.out.println("Incorrect input!");
